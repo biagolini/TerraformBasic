@@ -1,0 +1,7 @@
+# dependencies
+.terraform/
+
+# profiling files
+.terraform.lock.hcl
+terraform.tfstate
+*.out
