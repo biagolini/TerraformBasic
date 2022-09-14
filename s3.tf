@@ -1,6 +1,19 @@
+/*
+# Código para criar uma nova Bucket com nome aleatório
 resource "aws_s3_bucket" "this" {
   bucket = "curso-terraform-${var.environment}-${random_pet.rd_pet.id}-${random_password.rd_password.result}-${random_integer.rd_integer.id}"
   tags   = local.common_tags
+}
+*/
+# Código para importar um Bucket já existente
+resource "aws_s3_bucket" "this" {
+  bucket = "curso-terraform-dev-notable-moose-tz64wsmjpm-922"
+
+  tags = {
+    Criado    = "13/09/2022"
+    Importado = "14/09/2022"
+    ManagedBy = "Terraform"
+  }
 }
 
 resource "aws_s3_object" "pizza" { # Ao usar "this" estamos referenciando o objeto criado acima
