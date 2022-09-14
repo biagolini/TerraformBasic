@@ -1,8 +1,8 @@
 locals {
-  data_aws_path = "upload/data"
+  data_aws_path     = "upload/data"
   data_myFiles_path = "myFiles/data"
 
-  img_aws_path = "upload/img"
+  img_aws_path     = "upload/img"
   img_myFiles_path = "myFiles/img"
 
   file_names = {
